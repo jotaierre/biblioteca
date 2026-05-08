@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Biblioteca Comunitária</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23435ff2%22><path d=%22M21 4H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM3 6h8v12H3V6zm18 12h-8V6h8v12z%22/><path d=%22M5 8h4v2H5zm0 3h4v2H5zm0 3h4v2H5zm10-6h4v2h-4zm0 3h4v2h-4zm0 3h4v2h-4z%22/></svg>">
+    <!-- Tailwind CDN para garantir cores e estilos sem depender do build local imediato -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f7ff', 100: '#ebf0fe', 200: '#ced9fd', 300: '#a1b6fb',
+                            400: '#6d8bf7', 500: '#435ff2', 600: '#2c3ee6', 700: '#232fcc',
+                            800: '#2129a6', 900: '#1f2784', 950: '#12164d',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+  <script type="module" crossorigin src="./assets/main-B2fdqmaa.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/supabase-xacwcY1w.js">
+  <link rel="stylesheet" crossorigin href="./assets/supabase-CqvNNWYT.css">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-slate-100">
+    <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-2xl shadow-xl border border-slate-200">
+        <div class="text-center">
+            <div class="flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18 18.246 18.477 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+            </div>
+            <h2 class="mt-4 text-3xl font-extrabold text-slate-900">Biblioteca Comunitária</h2>
+            <p class="mt-2 text-sm text-slate-600">Entre para gerenciar seu acervo</p>
+        </div>
+
+        <!-- Alerta de Erro -->
+        <div id="auth-error" class="hidden p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg border border-red-200" role="alert"></div>
+
+        <form id="login-form" class="mt-8 space-y-6">
+            <div class="space-y-4 rounded-md shadow-sm">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required class="relative block w-full px-3 py-3 mt-1 border border-slate-300 placeholder-slate-500 text-slate-900 rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 focus:z-10 sm:text-sm" placeholder="exemplo@email.com">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-slate-700">Senha</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full px-3 py-3 mt-1 border border-slate-300 placeholder-slate-500 text-slate-900 rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 focus:z-10 sm:text-sm" placeholder="••••••••">
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-3">
+                <button type="submit" id="btn-login" class="group relative flex justify-center w-full px-4 py-3 text-sm font-medium text-white bg-primary-600 border border-transparent rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200">
+                    Entrar
+                </button>
+                <button type="button" id="btn-signup" class="group relative flex justify-center w-full px-4 py-3 text-sm font-medium text-primary-700 bg-primary-50 border border-primary-200 rounded-lg hover:bg-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200">
+                    Criar conta
+                </button>
+            </div>
+        </form>
+
+        <div class="text-center">
+            <p class="text-xs text-slate-500 italic">Fatec Itu - GTI - Programação para a Internet</p>
+        </div>
+    </div>
+
+</body>
+</html>
