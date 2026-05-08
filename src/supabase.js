@@ -1,10 +1,9 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+// Configuração direta para garantir funcionamento no GitHub Pages
+// As chaves "anon" são seguras para uso no frontend em projetos acadêmicos
+const supabaseUrl = 'https://mncmrycauwpdtonsnrzj.supabase.co'
+const supabaseAnonKey = 'sb_publishable_dq6UBFWpLtAbng7797pIxA_5Yq_Xizx'
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.error('Supabase URL or Anon Key is missing in .env file')
-}
-
+// Inicialização do cliente Supabase
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
